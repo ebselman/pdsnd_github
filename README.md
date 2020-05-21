@@ -1,5 +1,5 @@
 # **Bikeshare Analysis (Jan-June 2017)**
-*May 2020*
+## *May 2020*
 
 ## Project Description
 The **Bikeshare Analysis** Project analyzes bike sharing data for Chicago, New York City and Washington DC between January and June 2017. The created program allows the user to dynamically observe trends of bike usage upon his interests by filtering and accessing different types of statistics. After filtering and choosing the desired types of stats the program will provide different tables and graph to show interesting trends.
