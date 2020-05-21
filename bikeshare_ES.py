@@ -431,7 +431,7 @@ def user_stats(city, month, day, df):
 
 def choose_visualization(city, month, day):
 
-    """Creates a menu of analysis options for the user"""
+    """Creates a menu to choose type of stats to analyze"""
 
     print('\nCURRENT FILTER:\nCity : {}\nMonth: {}\nDay: {}\n'.format(city, month, day))
 
