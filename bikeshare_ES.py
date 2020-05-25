@@ -437,7 +437,7 @@ def choose_visualization(city, month, day):
 
     while True:
         try:
-            choose = int(input('What Analysis do you wish to visualize? (Enter options 1-7) \n1. Time Stats\n2. Station Stats\n3. Trip Duration Stats\n4. User Data\n5. Back to Filter\n6. Quit:\n'))
+            choose = int(input(colored('What Analysis do you wish to visualize? (Enter options 1-7) \n1. Time Stats\n2. Station Stats\n3. Trip Duration Stats\n4. User Data\n5. Back to Filter\n6. Quit:\n', "green")))
             break
         except ValueError:
             print('\nOops! Thats not a valid option. Retry\n')
