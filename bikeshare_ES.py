@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import matplotlib.cbook as cbook
-
+from termcolor import colored, cprint
 
 
 CITY_DATA = { 'chicago': 'chicago.csv',
@@ -24,7 +24,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('\nHello! Let\'s explore some 2017 US bikeshare data!\n')
+    cprint('\nHello! Let\'s explore some 2017 US bikeshare data!\n', 'blue')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('\nEnter a city to be analized(chicago, new york city or washington):\n').lower()
     while city not in list(CITY_DATA.keys()):
@@ -62,7 +62,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     filename = CITY_DATA[city]
-    df = pd.read_csv('/Users/ebselman/Desktop/UDACITY/PYTHON/bikeshare/{}'.format(filename))
+    df = pd.read_csv("/Users/ebselman/Desktop/UDACITY/GIT/pdsnd_github/{}".format(filename))
     days = ['monday', 'tuesday', 'wednesday','thursday', 'friday', 'saturday' ,'sunday']
     months = ['january', 'february', 'march', 'april', 'may', 'june']
 
@@ -437,7 +437,7 @@ def choose_visualization(city, month, day):
 
     while True:
         try:
-            choose = int(input('What Analysis do you wish to visualize? (Enter options 1-7) \n1. Time Stats\n2. Station Stats\n3. Trip Duration Stats\n4. User Data\n5. Back to Filter\n6. Quit:\n'))
+            choose = int(input(colored('What Analysis do you wish to visualize? (Enter options 1-7) \n1. Time Stats\n2. Station Stats\n3. Trip Duration Stats\n4. User Data\n5. Back to Filter\n6. Quit:\n', "green")))
             break
         except ValueError:
             print('\nOops! Thats not a valid option. Retry\n')
