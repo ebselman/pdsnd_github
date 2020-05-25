@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 import matplotlib.cbook as cbook
-
+from termcolor import colored, cprint
 
 
 CITY_DATA = { 'chicago': 'chicago.csv',
@@ -24,7 +24,7 @@ def get_filters():
         (str) month - name of the month to filter by, or "all" to apply no month filter
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
-    print('\nHello! Let\'s explore some 2017 US bikeshare data!\n')
+    cprint('\nHello! Let\'s explore some 2017 US bikeshare data!\n', 'blue')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     city = input('\nEnter a city to be analized(chicago, new york city or washington):\n').lower()
     while city not in list(CITY_DATA.keys()):
