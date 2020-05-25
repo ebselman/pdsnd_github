@@ -62,7 +62,7 @@ def load_data(city, month, day):
         df - Pandas DataFrame containing city data filtered by month and day
     """
     filename = CITY_DATA[city]
-    df = pd.read_csv('/Users/ebselman/Desktop/UDACITY/PYTHON/bikeshare/{}'.format(filename))
+    df = pd.read_csv("/Users/ebselman/Desktop/UDACITY/GIT/pdsnd_github/{}".format(filename))
     days = ['monday', 'tuesday', 'wednesday','thursday', 'friday', 'saturday' ,'sunday']
     months = ['january', 'february', 'march', 'april', 'may', 'june']
 
